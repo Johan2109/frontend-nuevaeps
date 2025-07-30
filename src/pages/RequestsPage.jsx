@@ -39,7 +39,6 @@ const RequestsPage = () => {
       const response = await api.get(
         `/requests?page=${page}&user_id=${userId}`
       );
-      console.log("Fetched requests:", response.data);
       setRequests(response.data.data);
       setPagination({
         currentPage: response.data.current_page,
